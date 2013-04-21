@@ -1,0 +1,37 @@
+{
+    "author"      : "Henri Bouvier",
+    "name"        : "node-tagger",
+    "description" : "Node Web Service to tag Part Of Speech (POS)",
+    "version"     : "0.0.1",
+    "repository"  : {
+        "type" : "git",
+        "url"  : "https://github.com/hbouvier/node-tagger.git"
+    },
+    "keywords": [
+        "POS",
+        "tagger",
+        "Part Of Speech"
+    ],
+    "main" : "./lib/node-tagger",
+    "bin"  : {
+        "tagger" : "./bin/tagger"
+    },
+    "dependencies"         : {
+        "express" : ">= 3.2.0 < 4.0.0",
+        "pos"     : "0.1.2"
+    },
+    "devDependencies"      : {
+        
+    },
+    "optionalDependencies" : {
+        
+    },
+    "engines"              : {
+        "node" : ">= 0.8.0 < 0.11.0"
+    },
+    "configuration"        : {
+        "name"    : "tagger",
+        "context" : "ws",
+        "port"    : 3000
+    }
+}
