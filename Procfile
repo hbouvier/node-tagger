@@ -1,2 +1,1 @@
-web: node bin/tagger.js
-
+web: node bin/tagger
