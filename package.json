@@ -12,7 +12,7 @@
         "tagger",
         "Part Of Speech"
     ],
-    "main" : "./lib/node-tagger.js",
+    "main" : "./lib/postagger.js",
     "bin"  : {
         "tagger" : "./bin/tagger"
     },
