@@ -1,0 +1,14 @@
+{
+    "name": "node-tagger-test",
+  "version": "0.0.1",
+  "description": "Test the node-tagger npm module",
+  "author": "Henri Bouvier",
+  "main": "test.js",
+  "dependencies": {
+    "express": "latest",
+    "node-tagger" : "latest"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
