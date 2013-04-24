@@ -15,9 +15,7 @@ app.configure(function () {
 });
 
 var baseTagURL = '/tag'; 
-app.get(baseTagURL + '/:phrase?', tagger.rest.tag); // ".../tag/hello world" and ".../tag?phase=hello world"
-app.put(baseTagURL, tagger.rest.tag);               // ".../tag" with body '{ phrase : "hello world" }'
-app.post(baseTagURL, tagger.rest.tag);              // ".../tag" with body '{ phrase : "hello world" }'    
+app.post('/tag', tagger.rest.tagPhrase);
 
 app.listen(process.env.PORT || 3000);
 util.log('Listening|port=' + (process.env.PORT || 3000));        
