@@ -34,3 +34,29 @@ tagger --port=3000 &
 
 
 # Include this as a module in your own project
+
+    var util    = require('util'),
+        tagger  = require('node-tagger'),
+        express = require('express'),
+        app     = express();
+    
+    // Lex the phrase, then Tag it.
+    util.log('Hello World = ' +  util.inspect(tagger.api.tag(tagger.api.lex('Hello World'))));
+    
+    ////////////////////////////////////////////////////////////////////////
+    //
+    // Express configuration for ALL environment
+    //
+    app.configure(function () {
+        app.use(express.bodyParser());
+        app.use(express.errorHandler());
+    });
+    
+    // USE: curl -X POST -H "Content-Type: application/json" -d '{"phrase":"hello world"}' http://localhost:3000/tag
+    var baseTagURL = '/tag';
+    app.post('/tag', tagger.rest.tagPhrase);
+    
+    app.listen(process.env.PORT || 3000);
+    util.log('Listening|port=' + (process.env.PORT || 3000));        
+
+

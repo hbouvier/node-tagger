@@ -3,6 +3,7 @@ var util    = require('util'),
     express = require('express'),
     app     = express();
     
+// Lex the phrase, then Tag it.
 util.log('Hello World = ' +  util.inspect(tagger.api.tag(tagger.api.lex('Hello World'))));
 
 ////////////////////////////////////////////////////////////////////////
