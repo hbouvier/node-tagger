@@ -62,4 +62,22 @@ tagger --port=3000 &
     app.listen(process.env.PORT || 3000);
     util.log('Listening|port=' + (process.env.PORT || 3000));        
 
+# To run the tests
+
+    cd test
+    npm install
+    node test.js &
+    ./test.sh
+
+# To deploy on Heroku
+
+Make sure you have an account and the "heroku" command line tools installed.
+This project already has a Procfile for heroku, the only left is to
+replace __MyPersonalTaggerService__ by the name you will chose for your service.
+
+    heroku create --stack cedar __MyPersonalTaggerService__
+    git push heroku master
+
+Then open your browser at http://__MyPersonalTaggerService__.herokuapp.com/
+
 
