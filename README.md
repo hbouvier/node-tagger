@@ -32,6 +32,9 @@ tagger --port=3000 &
 3. To combine the lexer and the tagger in one request
 > curl -X POST -H "Content-Type: application/json" -d '{"phrase":"hello world"}' http://localhost:3000/ws/tag/phrase
 
+### You can also use the HTML User Interface
+
+> http://localhost:3000/
 
 # Include this as a module in your own project
 
