@@ -1,0 +1,35 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div ng-controller="TaggerCtrl">
+            <div class="well">
+                <div class="row offset1">
+                    <div class="span10">
+                        <form accept-charset="UTF-8" action="" method="POST">
+                            <textarea id="phrase_textare" class="span12" ng-model="phrase"
+                            placeholder="Type in your phrase" rows="5"></textarea>
+                            <h6 class="pull-right">{{phrase.length}} characters</h6>
+                            <button class="btn btn-info btn-default" type="submit" ng-click="lexAndTag(phrase)">Lex and Tag</button>
+                        </form>
+                    </div>        
+                </div>  
+                <div class="row offset1">
+                    <div class="span10">
+                        <p>
+                            <a ng-repeat="tag in tags.tags" href="#" title="{{map[tag[1]]}}">{{tag[0]}} <span class="label label-info">{{tag[1]}}</span>&nbsp;&nbsp;</a> 
+                        </p>
+                    </div>        
+                </div>
+            </div>
+            <script>
+                $('#phrase_textare').keypress(function(e){
+                    if(e.keyCode == 13 && !e.shiftKey) {
+                        e.preventDefault();
+                        var scope = angular.element(this).scope();
+                        scope.lexAndTag(scope.phrase);
+                    }
+                });
+            </script>    
+
+		</div>
+	</div>
+</div>

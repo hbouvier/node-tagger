@@ -1,0 +1,13 @@
+@media (max-width: 480px) {
+    .modal-body { 
+        max-height: 350px; 
+        padding: 15px; 
+        overflow-y: auto; 
+        -webkit-overflow-scrolling: touch; 
+    }
+}
+@media (max-width: 800px) {
+    .hidden-800 {
+        display:none;
+    }
+}

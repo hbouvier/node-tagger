@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ------------------------------------------------------------------ --
+    --
+    --  META & PAGE TITLE INFORMATION
+    --
+    ---- ------------------------------------------------------------------ -->
+    <title>Node Part Of Speech (POS) Tagger</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="POS Tagger">
+    <meta name="author" content="Henri Bouvier">
+
+    <!-- ------------------------------------------------------------------ --
+    --
+    --  CASCADING STYLE-SHEET
+    --
+    ---- ------------------------------------------------------------------ -->
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.fixes.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.fixes.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
+    
+
+    <!-- ------------------------------------------------------------------ --
+    --
+    --  THANKS MICROSOFT FOR NEEDING SPECIFIC CODE FOR IE6-8
+    --
+    ---- ------------------------------------------------------------------ -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- ------------------------------------------------------------------ --
+    --
+    --  TOPMOST NAV BAR (e.g. Home, About, Contact
+    --
+    ---- ------------------------------------------------------------------ -->
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Part Of Speech Tagger</a>
+            <div class="nav-collapse collapse">
+            </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container" ng-app="Application">
+        <div ng-view>
+        </div>
+        
+        
+        <!-- ------------------------------------------------------------------ --
+        --
+        --  BOTTOMMOST NAV BAR (e.g. (c) 2012)
+        --
+        ---- ------------------------------------------------------------------ -->
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="navbar-inner">
+                <div class="pull-right">
+                    <ul class="nav pull-right">
+                        <a class="brand" href="/">&copy; Henri Bouvier 2013</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="lib/jquery/jquery-1.8.3.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-resource.min.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+  </body>
+</html>
