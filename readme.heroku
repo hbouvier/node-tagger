@@ -1,2 +1,0 @@
-heroku create --stack cedar node-tagger
-git push heroku master

@@ -15,8 +15,9 @@ app.configure(function () {
     app.use(express.errorHandler());
 });
 
-var baseTagURL = '/tag'; 
-app.post('/tag', tagger.rest.tagPhrase);
+app.post('/lex', tagger.rest.lexPhrase);
+app.post('/tag/phrase', tagger.rest.tagPhrase);
+app.post('/tag/words', tagger.rest.tagWords);
 
 app.listen(process.env.PORT || 3000);
 util.log('Listening|port=' + (process.env.PORT || 3000));        
