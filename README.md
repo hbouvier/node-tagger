@@ -16,7 +16,7 @@ npm install -g node-tagger
 
 # Usage on the command line
 
-tagger --phrase='Hello world'
+tagger Hello world
 
 # Usage as a Web Service
 
@@ -38,13 +38,12 @@ tagger --port=3000 &
 
 # Include this as a module in your own project
 
-    var util    = require('util'),
-        tagger  = require('node-tagger'),
+    var tagger  = require('node-tagger'),
         express = require('express'),
         app     = express();
     
     // Lex the phrase, then Tag it.
-    util.log('Hello World = ' +  util.inspect(tagger.api.tag(tagger.api.lex('Hello World'))));
+    console.log('Hello World = ', tagger.api.tag(tagger.api.lex('Hello World')));
     
     ////////////////////////////////////////////////////////////////////////
     //
@@ -61,14 +60,11 @@ tagger --port=3000 &
     app.post('/tag/words', tagger.rest.tagWords);
     
     app.listen(process.env.PORT || 3000);
-    util.log('Listening|port=' + (process.env.PORT || 3000));        
+    console.log('Listening|port=' + (process.env.PORT || 3000));
 
 # To run the tests
 
-    cd test
-    npm install
-    node test.js &
-    ./test.sh
+    npm test
 
 # To deploy on Heroku
 

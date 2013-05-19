@@ -33,6 +33,9 @@
     "engines"              : {
         "node" : ">= 0.8.0 < 0.11.0"
     },
+    "scripts": {
+        "test": "node test/test.js"
+    },
     "configuration"        : {
         "name"    : "tagger",
         "level"   : "info",
