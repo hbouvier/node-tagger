@@ -18,7 +18,11 @@
     },
     "dependencies"         : {
         "express" : ">= 3.2.0 < 4.0.0",
-        "pos"     : "0.1.2"
+        "winston" : "*",
+        "pos"     : "0.1.2",
+        "node-engine" : "latest",
+        "node-options" : ">= 0.0.2",
+        "node-network-monitor" : "latest"
     },
     "devDependencies"      : {
         
@@ -31,9 +35,10 @@
     },
     "configuration"        : {
         "name"    : "tagger",
-        "context" : "ws",
-        "port"    : 3000,
         "level"   : "info",
-        "phrase"  : null
+        "workers" : 0,
+        "script"  : "lib/main.js",
+        "context" : "ws",
+        "port"    : 3000
     }
 }
