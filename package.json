@@ -17,7 +17,9 @@
         "tagger" : "./bin/tagger"
     },
     "dependencies"         : {
-        "express" : ">= 3.2.0 < 4.0.0",
+        "express" : "3.2.5",
+        "swagger-node-express" : "1.2.3",
+        "swagger-ui" : "0.1.14",
         "winston" : "*",
         "pos"     : "0.1.2",
         "node-engine" : "latest",
@@ -34,14 +36,15 @@
         "node" : ">= 0.8.0 < 0.11.0"
     },
     "scripts": {
-        "test": "node test/test.js"
+        "start": "bin/tagger",
+        "test":  "node test/test.js"
     },
     "configuration"        : {
         "name"    : "tagger",
         "level"   : "info",
         "workers" : 0,
         "script"  : "lib/main.js",
-        "context" : "ws",
+        "context" : "ws/v1",
         "port"    : 3000
     }
 }

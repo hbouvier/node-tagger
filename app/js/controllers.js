@@ -54,7 +54,7 @@ var TaggerCtrl = [ '$scope', '$http', 'Tagger', function ($scope, $http, Tagger)
     $scope.lexAndTag = function(phrase) {
         console.log('lex and tag:' + phrase);
         //Tagger.save({"phrase":phrase});
-        $http.post('/ws/tag/phrase', {"phrase":phrase}).success(function (data) {
+        $http.post('/ws/v1/pos.json/tag/phrase', {"phrase":phrase}, {"headers": {"x-api-key" : "henri-id"}}).success(function (data) {
             $scope.tags = data;
             console.log('tags/data:', $scope.tags);
         });
